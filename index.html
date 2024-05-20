@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="countdown-container">
-        <h1>Countdown Timer</h1>
-        <div><a id="days">00</a> Days</div>
-        <div><a id="hours">00</a> Hours</div>
-        <div><a id="minutes">00</a> Minutes</div>
-        <div><a id="seconds">00</a> Seconds</div>
+    <div class="container py-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Days</th>
+                    <th scope="col">Hours</th>
+                    <th scope="col">Minutes</th>
+                    <th scope="col">Seconds</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a id="days">00</a></td>
+                    <td><a id="hours">00</a></td>
+                    <td><a id="minutes">00</a></td>
+                    <td><a id="seconds">00</a></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script src="script.js"></script>
 </body>
