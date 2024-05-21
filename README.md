@@ -2,4 +2,4 @@
 [access here](https://only1thor.github.io/countdown/)
 
 # ToDo:
-[ ] handle timezones
+- [ ] handle timezones
