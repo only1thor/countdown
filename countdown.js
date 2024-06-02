@@ -29,28 +29,6 @@ setInterval(() => {
     }
 }, 1000);
 
-self.addEventListener('install', function(event) {
-    event.waitUntil(
-        caches.open('my-cache').then(function(cache) {
-            return cache.addAll([
-                '/',
-                '/index.html',
-                '/countdown.js',
-                '/bg.jpg',
-                'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css'
-            ]);
-        })
-    );
-});
-
-self.addEventListener('fetch', function(event) {
-    event.respondWith(
-        caches.match(event.request).then(function(response) {
-            return response || fetch(event.request);
-        })
-    );
-});
-
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js')
     .then(function(registration) {
